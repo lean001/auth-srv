@@ -1,0 +1,49 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <p class="navbar-brand">LOL WiFi Portal</p>
+        </div>
+<!--         <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div> -->
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+<div class="panel panel-primary">
+    <div class="panel-heading"><b>注意事项</b></div>
+    <div class="panel-body" style='font-family: Arial'>
+        1、用户名只能是<b>数字</b>、<b>字母</b>组合，不能使用中文。<br>
+        2、使用该网络应遵循国家法律，不得浏览违反国家法律的网页。<br>
+        3、一个手机只能注册一个账户，重复注册无效，恶意重复注册者，将被禁用网络。<br>
+        4、每个用户有500M免费流量，流量不够用可用微信扫描下方二维码联系管理员充值。<br>
+        5、本网络暂时处于测试阶段，不推荐使用bt等大流量下载工具<br>
+        6、最终解释权归网络提供者所有。<br>
+    </div>
+</div>
+
+<div class="container">
+
+{{ wtf.quick_form(form) }}
+
+</div>
+
+{% include "flash.html" %}
+
+{% include "wechat.html" %}
+
+{% include "footer.html" %}
+
+{% endblock %}

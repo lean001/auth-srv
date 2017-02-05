@@ -1,0 +1,7 @@
+.idea/
+problem.log
+*.pyc
+__pycache__
+*.swp
+*.bak
+instance/
